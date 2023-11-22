@@ -14,6 +14,7 @@ ruleTester.run(
       { code: "t('Hello')" },
       { code: "t('Hello {name}', { name: 'Mia' })" },
       { code: "tn(1, 'Hello', 'Hello {count} times', { count: 1 })" },
+      { code: "tn(1, 'Hello {n}', 'Hello {count} times', { count: 1 })" },
       { code: "tx('Hello <b>{name}</b>', { name: 'Mia', b: content => `<b>{content}</b>` })" },
     ],
     invalid: [
