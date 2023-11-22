@@ -36,7 +36,7 @@ module.exports = {
         if (!singular) {
           return context.report({
             node,
-            message: 'Singular functio ndefined but no singular string found',
+            message: 'Singular function defined but no singular string found',
           })
         }
 
