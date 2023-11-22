@@ -9,10 +9,10 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "dependencies": {
-    "@connectedcars/react-i18n": "^2.2.0"
-  },
   "devDependencies": {
     "eslint": "^8.54.0"
+  },
+  "peerDependencies": {
+    "@connectedcars/react-i18n": "^2.2.0"
   }
 }
