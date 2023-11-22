@@ -55,7 +55,7 @@ module.exports = {
         if (dataArg && dataArg.type !== 'ObjectExpression') {
           return context.report({
             node,
-            message: 'Data argument must be an object',
+            message: 'Data argument must be an inline object',
           })
         }
 
