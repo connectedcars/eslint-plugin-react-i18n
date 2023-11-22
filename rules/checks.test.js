@@ -22,6 +22,7 @@ ruleTester.run(
       { code: "t('Hello {name}')", errors: 1 },
       { code: "t('Hello {name} {lastname}')", errors: 2 },
       { code: "tx('Hello <b>{name}</b>', { name: 'Mia' })", errors: 1 },
+      { code: "const x = { foo: 'bar' }; t('Hello {foo}', x)", errors: 1 },
     ],
   }
 )

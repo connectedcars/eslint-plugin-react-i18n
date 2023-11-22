@@ -36,7 +36,7 @@ module.exports = {
         if (!singular) {
           return context.report({
             node,
-            message: 'Singular function defined but no singular string found',
+            message: `Singular translation function (${funcName}) defined but no singular string found`,
           })
         }
 
@@ -46,7 +46,7 @@ module.exports = {
         if (isPluralFunc && !plural) {
           return context.report({
             node,
-            message: 'Plural function defined but no plural string found',
+            message: `plural translation function (${funcName}) defined but no plural string found`,
           })
         }
 
