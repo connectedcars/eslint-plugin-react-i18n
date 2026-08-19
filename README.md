@@ -2,14 +2,41 @@
 
 ## Installation
 
-`npm install @connectedcars/eslint-plugin-react-i18n`
+`npm install @connectedcars/lint-plugin-react-i18n`
 
-## ESlint config
+## ESLint config
 
-Open your eslint config file and add the following under `rules`:
+Load `@connectedcars/lint-plugin-react-i18n/eslint` as the plugin in your ESLint
+configuration, then enable the rule:
+
+```js
+module.exports = {
+  plugins: {
+    'react-i18n': require('@connectedcars/lint-plugin-react-i18n/eslint'),
+  },
+  rules: {
+    'react-i18n/checks': 'error',
+  },
+}
+```
+
+## Oxlint config
+
+Oxlint loads the compatible JavaScript plugin from the package's `oxlint`
+subpath. Add it to `jsPlugins` in `.oxlintrc.json` and enable the rule:
 
 ```json
-"@connectedcars/react-i18n/checks": "error"
+{
+  "jsPlugins": [
+    {
+      "name": "react-i18n",
+      "specifier": "@connectedcars/lint-plugin-react-i18n/oxlint"
+    }
+  ],
+  "rules": {
+    "react-i18n/checks": "error"
+  }
+}
 ```
 
 ## Options
@@ -17,7 +44,7 @@ Open your eslint config file and add the following under `rules`:
 It's also possible to change some of the default options such as:
 
 ```json
-"@connectedcars/react-i18n/checks": [
+"react-i18n/checks": [
   "error",
   {
     "globalData": [
