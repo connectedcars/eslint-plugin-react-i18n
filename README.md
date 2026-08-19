@@ -2,20 +2,20 @@
 
 ## Installation
 
-`npm install @connectedcars/lint-plugin-react-i18n`
+`npm install @connectedcars/eslint-plugin-react-i18n`
 
 ## ESLint config
 
-Load `@connectedcars/lint-plugin-react-i18n/eslint` as the plugin in your ESLint
+Load `@connectedcars/eslint-plugin-react-i18n/eslint` as the plugin in your ESLint
 configuration, then enable the rule:
 
 ```js
 module.exports = {
   plugins: {
-    'react-i18n': require('@connectedcars/lint-plugin-react-i18n/eslint'),
+    '@connectedcars/react-i18n': require('@connectedcars/eslint-plugin-react-i18n/eslint'),
   },
   rules: {
-    'react-i18n/checks': 'error',
+    '@connectedcars/react-i18n/checks': 'error',
   },
 }
 ```
@@ -29,12 +29,12 @@ subpath. Add it to `jsPlugins` in `.oxlintrc.json` and enable the rule:
 {
   "jsPlugins": [
     {
-      "name": "react-i18n",
-      "specifier": "@connectedcars/lint-plugin-react-i18n/oxlint"
+      "name": "@connectedcars/react-i18n",
+      "specifier": "@connectedcars/eslint-plugin-react-i18n/oxlint"
     }
   ],
   "rules": {
-    "react-i18n/checks": "error"
+    "@connectedcars/react-i18n/checks": "error"
   }
 }
 ```
@@ -44,7 +44,7 @@ subpath. Add it to `jsPlugins` in `.oxlintrc.json` and enable the rule:
 It's also possible to change some of the default options such as:
 
 ```json
-"react-i18n/checks": [
+"@connectedcars/react-i18n/checks": [
   "error",
   {
     "globalData": [

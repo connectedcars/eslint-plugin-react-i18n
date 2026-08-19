@@ -1,8 +1,8 @@
 module.exports = {
   meta: {
-    name: 'react-i18n',
+    name: '@connectedcars/react-i18n',
   },
   rules: {
-    "checks": require('./rules/checks')
-  }
+    checks: require('./rules/checks'),
+  },
 }

@@ -12,7 +12,7 @@ describe('plugin entry points', () => {
 
     assert.equal(typeof eslintPlugin.rules.checks.create, 'function')
     assert.equal(eslintSubpathPlugin, eslintPlugin)
-    assert.equal(oxlintPlugin.meta.name, 'react-i18n')
+    assert.equal(oxlintPlugin.meta.name, '@connectedcars/react-i18n')
     assert.equal(typeof oxlintPlugin.rules.checks.create, 'function')
     assert.equal(oxlintPlugin.rules.checks, eslintPlugin.rules.checks)
   })
